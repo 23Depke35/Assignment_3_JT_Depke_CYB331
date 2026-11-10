@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment Form</title>
+</head>
+<body>
+    <h2>Submit a Comment</h2>
+    <form action="/comment" method="POST">
+        <textarea name="comment" rows="4" cols="50" placeholder="Enter your comment here..."></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if comment %}
+        <h3>Submitted Comment:</h3>
+        <p>{{ comment }}</p>
+    {% endif %}
+</body>
+</html>
